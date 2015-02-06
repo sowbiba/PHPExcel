@@ -1,5 +1,5 @@
 {
-    "name": "phpoffice/phpexcel",
+    "name": "sowbiba/phpexcel",
     "description": "PHPExcel - OpenXML - Read, Create and Write Spreadsheet documents in PHP - Spreadsheet engine",
     "keywords": ["PHP","Excel","OpenXML","xlsx","xls","spreadsheet"],
     "homepage": "http://phpexcel.codeplex.com",
@@ -7,18 +7,8 @@
     "license": "LGPL",
     "authors": [
         {
-            "name": "Maarten Balliauw",
-            "homepage": "http://blog.maartenballiauw.be"
-        },
-        {
-            "name": "Mark Baker"
-        },
-        {
-            "name": "Franck Lefevre",
-            "homepage": "http://blog.rootslabs.net"
-        },
-        {
-            "name": "Erik Tilt"
+            "name": "Ibrahima SOW - for Profideo",
+            "homepage": "http://profideo.com"
         }
     ],
     "require": {
