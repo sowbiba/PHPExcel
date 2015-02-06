@@ -276,7 +276,7 @@ class PHPExcel_Calculation {
 										   );
 
 	//	PHPExcel functions
-	private static $_PHPExcelFunctions = array(	// PHPExcel functions
+	protected static $_PHPExcelFunctions = array(	// PHPExcel functions
 				'ABS'					=> array('category'			=>	PHPExcel_Calculation_Function::CATEGORY_MATH_AND_TRIG,
 												 'functionCall'		=>	'abs',
 												 'argumentCount'	=>	'1'
@@ -3474,7 +3474,9 @@ class PHPExcel_Calculation {
 //					echo 'Named Range is '.$namedRange.'<br />';
 					$this->_debugLog->writeDebugLog('Evaluating Named Range ', $namedRange);
 					$cellValue = $this->extractNamedRange($namedRange, ((NULL !== $pCell) ? $pCellWorksheet : NULL), FALSE);
-					$pCell->attach($pCellParent);
+					if(null !== $pCellParent) {
+						$pCell->attach($pCellParent);
+					}
 					$this->_debugLog->writeDebugLog('Evaluation Result for named range ', $namedRange, ' is ', $this->_showTypeDetails($cellValue));
 					$stack->push('Named Range',$cellValue,$namedRange);
 				} else {
